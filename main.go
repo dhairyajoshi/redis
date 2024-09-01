@@ -8,7 +8,8 @@ import (
 type store map [string] string;
 
 var(
-	Store = store{}
+	Store = make([]store, 10)
+	Index = 0
 )
 
 func main(){
