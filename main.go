@@ -47,7 +47,6 @@ func main(){
 		args := value.array[1:]
 
 		writer := NewWriter(conn)
-		fmt.Println(command)
 		handler, ok := Handlers[command]
 		if !ok {
 			fmt.Println("Invalid command: ", command)

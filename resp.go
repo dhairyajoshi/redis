@@ -41,9 +41,8 @@ func (r *Resp) readLine() (line []byte, n int, err error){
 
 		line = append(line, next_byte)
 		n+=1
-
-		if len(line)>=2 && line[len(line)-1]=='\r'{
-			return line[:len(line)-1], n, nil
+		if len(line)>=2 && line[len(line)-2]=='\r'{
+			return line[:len(line)-2], n-2, nil
 		}
 	}
 }
