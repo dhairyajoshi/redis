@@ -5,6 +5,11 @@ import (
 	"net"
 	"strings"
 )
+type store map [string] string;
+
+var(
+	Store = store{}
+)
 
 func main(){
 	fmt.Println("Listening on port :6379")
